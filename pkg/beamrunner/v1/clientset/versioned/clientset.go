@@ -30,10 +30,10 @@ import (
 	"fmt"
 	"net/http"
 
+	workv1 "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/clientset/versioned/typed/beamrunner/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"
-	workv1 "slai.io/beamcrds/pkg/beamrunner/v1/clientset/versioned/typed/beamrunner/v1"
 )
 
 type Interface interface {

@@ -30,12 +30,12 @@ import (
 	"context"
 	"time"
 
+	v1 "github.com/slai-labs/beamcrds/pkg/beamrunner/v1"
+	scheme "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	rest "k8s.io/client-go/rest"
-	v1 "slai.io/beamcrds/pkg/beamrunner/v1"
-	scheme "slai.io/beamcrds/pkg/beamrunner/v1/clientset/versioned/scheme"
 )
 
 // BeamRunnersGetter has a method to return a BeamRunnerInterface.

@@ -30,14 +30,14 @@ import (
 	"context"
 	time "time"
 
+	beamrunnerv1 "github.com/slai-labs/beamcrds/pkg/beamrunner/v1"
+	versioned "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/clientset/versioned"
+	internalinterfaces "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/informers/externalversions/internalinterfaces"
+	v1 "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/listers/beamrunner/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
 	cache "k8s.io/client-go/tools/cache"
-	beamrunnerv1 "slai.io/beamcrds/pkg/beamrunner/v1"
-	versioned "slai.io/beamcrds/pkg/beamrunner/v1/clientset/versioned"
-	internalinterfaces "slai.io/beamcrds/pkg/beamrunner/v1/informers/externalversions/internalinterfaces"
-	v1 "slai.io/beamcrds/pkg/beamrunner/v1/listers/beamrunner/v1"
 )
 
 // BeamRunnerInformer provides access to a shared informer and lister for

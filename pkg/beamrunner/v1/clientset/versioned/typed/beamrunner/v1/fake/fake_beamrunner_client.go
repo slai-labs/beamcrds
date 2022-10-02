@@ -27,9 +27,9 @@ SOFTWARE.
 package fake
 
 import (
+	v1 "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/clientset/versioned/typed/beamrunner/v1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
-	v1 "slai.io/beamcrds/pkg/beamrunner/v1/clientset/versioned/typed/beamrunner/v1"
 )
 
 type FakeWorkV1 struct {

@@ -27,14 +27,14 @@ SOFTWARE.
 package fake
 
 import (
+	clientset "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/clientset/versioned"
+	workv1 "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/clientset/versioned/typed/beamrunner/v1"
+	fakeworkv1 "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/clientset/versioned/typed/beamrunner/v1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"
 	fakediscovery "k8s.io/client-go/discovery/fake"
 	"k8s.io/client-go/testing"
-	clientset "slai.io/beamcrds/pkg/beamrunner/v1/clientset/versioned"
-	workv1 "slai.io/beamcrds/pkg/beamrunner/v1/clientset/versioned/typed/beamrunner/v1"
-	fakeworkv1 "slai.io/beamcrds/pkg/beamrunner/v1/clientset/versioned/typed/beamrunner/v1/fake"
 )
 
 // NewSimpleClientset returns a clientset that will respond with the provided objects.

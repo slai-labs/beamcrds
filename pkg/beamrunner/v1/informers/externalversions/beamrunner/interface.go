@@ -27,8 +27,8 @@ SOFTWARE.
 package beamrunner
 
 import (
-	v1 "slai.io/beamcrds/pkg/beamrunner/v1/informers/externalversions/beamrunner/v1"
-	internalinterfaces "slai.io/beamcrds/pkg/beamrunner/v1/informers/externalversions/internalinterfaces"
+	v1 "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/informers/externalversions/beamrunner/v1"
+	internalinterfaces "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

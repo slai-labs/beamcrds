@@ -3,9 +3,9 @@ package v1
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
+	beamrunner "github.com/slai-labs/beamcrds/pkg/beamrunner"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	beamrunner "slai.io/beamcrds/pkg/beamrunner"
 )
 
 var (

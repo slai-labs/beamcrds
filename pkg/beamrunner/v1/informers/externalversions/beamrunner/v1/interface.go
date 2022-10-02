@@ -27,7 +27,7 @@ SOFTWARE.
 package v1
 
 import (
-	internalinterfaces "slai.io/beamcrds/pkg/beamrunner/v1/informers/externalversions/internalinterfaces"
+	internalinterfaces "github.com/slai-labs/beamcrds/pkg/beamrunner/v1/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to all the informers in this group version.

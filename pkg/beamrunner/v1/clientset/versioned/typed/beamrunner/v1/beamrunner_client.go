@@ -29,9 +29,9 @@ package v1
 import (
 	"net/http"
 
+	v1 "github.com/slai-labs/beamcrds/pkg/beamrunner/v1"
+	"github.com/slai-labs/beamcrds/pkg/beamrunner/v1/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
-	v1 "slai.io/beamcrds/pkg/beamrunner/v1"
-	"slai.io/beamcrds/pkg/beamrunner/v1/clientset/versioned/scheme"
 )
 
 type WorkV1Interface interface {

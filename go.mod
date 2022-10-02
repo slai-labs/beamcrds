@@ -1,4 +1,4 @@
-module slai.io/beamcrds
+module github.com/slai-labs/beamcrds
 
 go 1.19
 
