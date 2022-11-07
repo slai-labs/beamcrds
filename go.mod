@@ -1,6 +1,6 @@
 module github.com/slai-labs/beamcrds
 
-go 1.19
+go 1.18
 
 require (
 	k8s.io/apimachinery v0.25.2
