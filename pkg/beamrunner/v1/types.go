@@ -24,11 +24,8 @@ type Trigger struct {
 }
 
 type AppDeployment struct {
-	ExternalId  string `json:"external_id"`
-	Status      string `json:"status"`
-	AppId       uint   `json:"app_id"`
 	TriggerType string `json:"trigger_type"`
-	Version     uint   `json:"version"`
+	Version     int    `json:"version"`
 }
 
 type BeamRunnerSpec struct {
