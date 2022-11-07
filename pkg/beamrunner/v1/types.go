@@ -23,19 +23,14 @@ type Trigger struct {
 	Expression  string                       `json:"expression"` // Cron expression
 }
 
-type AppDeployment struct {
-	TriggerType string `json:"trigger_type"`
-	Version     int    `json:"version"`
-}
-
 type BeamRunnerSpec struct {
-	IdentityId      string        `json:"identityId"`
-	Image           string        `json:"image"`
-	AppId           string        `json:"appId"`
-	AppSessionId    string        `json:"appSessionId"`
-	AppDeploymentId string        `json:"appDeploymentId"`
-	AppDeployment   AppDeployment `json:"appDeployment"`
-	Trigger         Trigger       `json:"trigger"`
+	IdentityId      string  `json:"identityId"`
+	Image           string  `json:"image"`
+	AppId           string  `json:"appId"`
+	AppVersion      int     `json:"appVersion"`
+	AppSessionId    string  `json:"appSessionId"`
+	AppDeploymentId string  `json:"appDeploymentId"`
+	Trigger         Trigger `json:"trigger"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
