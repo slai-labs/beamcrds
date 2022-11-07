@@ -1,6 +1,10 @@
 package v1
 
-import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+import (
+	"time"
+
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+)
 
 // +genclient
 // +genclient:noStatus
@@ -21,13 +25,24 @@ type Trigger struct {
 	Expression  string                       `json:"expression"` // Cron expression
 }
 
+type AppDeployment struct {
+	ExternalId  string    `json:"external_id"`
+	Created     time.Time `json:"created"`
+	Updated     time.Time `json:"updated"`
+	Status      string    `json:"status"`
+	AppId       uint      `json:"app_id"`
+	TriggerType string    `json:"trigger_type"`
+	Version     uint      `json:"version"`
+}
+
 type BeamRunnerSpec struct {
-	IdentityId      string  `json:"identityId"`
-	Image           string  `json:"image"`
-	AppId           string  `json:"appId"`
-	AppSessionId    string  `json:"appSessionId"`
-	AppDeploymentId string  `json:"appDeploymentId"`
-	Trigger         Trigger `json:"trigger"`
+	IdentityId      string        `json:"identityId"`
+	Image           string        `json:"image"`
+	AppId           string        `json:"appId"`
+	AppSessionId    string        `json:"appSessionId"`
+	AppDeploymentId string        `json:"appDeploymentId"`
+	AppDeployment   AppDeployment `json:"appDeployment"`
+	Trigger         Trigger       `json:"trigger"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
