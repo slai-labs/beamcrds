@@ -5,7 +5,7 @@ go 1.19
 require (
 	k8s.io/apimachinery v0.25.2
 	k8s.io/client-go v0.25.2
-	k8s.io/code-generator v0.25.2
+	k8s.io/code-generator v0.25.3
 )
 
 require (

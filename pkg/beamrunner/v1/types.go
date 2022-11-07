@@ -12,11 +12,22 @@ type BeamRunner struct {
 	Spec              BeamRunnerSpec `json:"spec"`
 }
 
+type Trigger struct {
+	Inputs       map[string]map[string]string `json:"inputs"`
+	Outputs      map[string]map[string]string `json:"outputs"`
+	TriggerType  string                       `json:"trigger_type"`
+	Handler      string                       `json:"handler"`
+	Loader       string                       `json:"loader"`
+	CronSchedule string                       `json:"cron_schedule"`
+}
+
 type BeamRunnerSpec struct {
-	IdentityId   string `json:"identityId"`
-	Image        string `json:"image"`
-	AppId        string `json:"appId"`
-	AppSessionId string `json:"appSessionId"`
+	IdentityId      string  `json:"identityId"`
+	Image           string  `json:"image"`
+	AppId           string  `json:"appId"`
+	AppSessionId    string  `json:"appSessionId"`
+	AppDeploymentId string  `json:"appDeploymentId"`
+	Trigger         Trigger `json:"trigger"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
