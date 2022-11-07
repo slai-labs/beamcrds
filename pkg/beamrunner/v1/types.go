@@ -1,8 +1,6 @@
 package v1
 
 import (
-	"time"
-
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -26,13 +24,11 @@ type Trigger struct {
 }
 
 type AppDeployment struct {
-	ExternalId  string    `json:"external_id"`
-	Created     time.Time `json:"created"`
-	Updated     time.Time `json:"updated"`
-	Status      string    `json:"status"`
-	AppId       uint      `json:"app_id"`
-	TriggerType string    `json:"trigger_type"`
-	Version     uint      `json:"version"`
+	ExternalId  string `json:"external_id"`
+	Status      string `json:"status"`
+	AppId       uint   `json:"app_id"`
+	TriggerType string `json:"trigger_type"`
+	Version     uint   `json:"version"`
 }
 
 type BeamRunnerSpec struct {
