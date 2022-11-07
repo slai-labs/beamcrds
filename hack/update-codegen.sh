@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 SCRIPT_ROOT=$(dirname "${BASH_SOURCE[0]}")/..
-CODEGEN_PKG="${HOME}/go/pkg/mod/k8s.io/code-generator@v0.25.2/"
+CODEGEN_PKG="${HOME}/go/pkg/mod/k8s.io/code-generator@v0.25.3/"
 GO_PKG="github.com/slai-labs/beamcrds/pkg"
 
 # usage: generate-groups.sh <generators> <output-package> <apis-package> <groups-versions>

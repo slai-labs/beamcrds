@@ -20,7 +20,7 @@ type Trigger struct {
 	TriggerType string                       `json:"trigger_type"`
 	Handler     string                       `json:"handler"`
 	Loader      string                       `json:"loader"`
-	Expression  string                       `json:"expression"` // Cron expression
+	When        string                       `json:"when"` // Cron expression
 }
 
 type BeamRunnerSpec struct {
