@@ -15,12 +15,12 @@ type BeamRunner struct {
 }
 
 type Trigger struct {
-	Inputs      map[string]map[string]string `json:"inputs"`
-	Outputs     map[string]map[string]string `json:"outputs"`
-	TriggerType string                       `json:"trigger_type"`
-	Handler     string                       `json:"handler"`
-	Loader      string                       `json:"loader"`
-	When        string                       `json:"when"` // Cron expression
+	// Inputs      map[string]map[string]string `json:"inputs"`
+	// Outputs     map[string]map[string]string `json:"outputs"`
+	TriggerType string `json:"trigger_type"`
+	Handler     string `json:"handler"`
+	Loader      string `json:"loader"`
+	When        string `json:"when"` // Cron expression
 }
 
 type BeamRunnerSpec struct {
